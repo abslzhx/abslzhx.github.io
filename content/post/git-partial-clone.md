@@ -1,7 +1,7 @@
 +++
 title = '使用部分克隆提高 Git 克隆代码的效率'
 date = 2023-12-02T12:08:39+08:00
-draft = true
+draft = false
 +++
 
 源于在使用 Raycast 的一个插件时遇到了报错，但是通过报错信息无法直接定位，所幸 Raycast 商店的插件都开源在 [Raycast-Extension](!https://github.com/raycast/extensions.git) 仓库中，于是打算将插件代码直接拉到本地 Debug 来排查问题。
@@ -19,7 +19,7 @@ remote: Compressing objects: 100% (701/701), done.
 Receiving objects:   0% (647/96074), 21.77 MiB | 7.24 MiB/s
 ```
 
-通过 `curl https://api.github.com/repos/raycast/extensions` 命令查看返回的仓库信息中 `size` 在 6G 左右，因为 Raycast 官方将所有插件都放在了这个仓库中，所以导致了仓库比较大。
+通过 `https://api.github.com/repos/raycast/extensions` 查看返回的仓库信息中 `size` 在 6G 左右，因为 Raycast 官方将所有插件都放在了这个仓库中，所以导致了仓库比较大。
 
 如果完整拉取整个仓库的话会，其实是浪费了时间和存储空间，并不是我想要的，因为我只想要其中的一个插件的代码而已。那有没有办法减少克隆的对象来提高拉取速度呢？
 
