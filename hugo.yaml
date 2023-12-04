@@ -1,0 +1,6 @@
+baseURL: "https://example.org/"
+languageCode: zh-cn
+title: ZX Home
+theme: paper
+params:
+  defaultTheme: auto
