@@ -1,6 +1,7 @@
 baseURL: "https://example.org/"
 languageCode: zh-cn
-title: ZX Home
+title: dev3i
 theme: paper
 params:
   defaultTheme: auto
+  github: abslzhx
